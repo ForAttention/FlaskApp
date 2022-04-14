@@ -1,6 +1,6 @@
 # modeles.py
-from flask_sqlalchemy import SQLAlchemy
 from FlasK import db
+
 
 """
 Przekopiowane z api file dla wglądu
@@ -44,4 +44,12 @@ class WrongBase(db.Model):
 
 
 """To tylko raz odpalamy jako konstruktor!"""
-db.create_all()
+# db.create_all()
+
+"""To jednak musi być na końcu, żeby utworzyc wszystkie tabele
+    Często kasuje bazę i ją odtwarzam na nowo właśnie tą komendą
+    Pracowałem jako tester, a to robiłem dla siebie w pracy (nikt nie podzielał mojego entuzjazmu)
+    Najgorzej jest wywalić bazę jak już aplikacja znajduje się na serwerze
+    Trzeba było wtedy widzieć minę kolegów devów z pokoju jak zacząlem się cieszyć że w końcu udało mi się
+    wykasować bazę z serwera :D
+    """

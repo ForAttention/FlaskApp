@@ -19,16 +19,18 @@
       <th scope="col">LINK SITE</th>
     </tr>
   </thead>
+      {% for data in iten %}
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>ojooj</td>
-      <td><button type="button" class="btn btn-outline-danger">Przejdź do strony</button></td>
+      <td>{{ data.id }}</td>
+      <td>{{ data.url_name }}</td>
+      <td>{{ data.status_code }}</td>
+      <td>{{ data.data_time }}</td>
+      <td>{{ data.error_code }}</td>
+      <td><a href="{{ data.url_name }}" target="_blank"><button type="button" class="btn btn-outline-success">Przejdź do strony</button></a></td>
     </tr>
   </tbody>
+      {% endfor %}
 </table>
 {% endblock %}
 
@@ -51,16 +53,18 @@
         <th scope="col">LINK SITE</th>
     </tr>
   </thead>
+      {% for data in item %}
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-        <td>ojooj</td>
-      <td><button type="button" class="btn btn-outline-success">Przejdź do strony</button></td>
+      <td>{{ data.id }}</td>
+      <td>{{ data.url_name }}</td>
+      <td>{{ data.status_code }}</td>
+      <td>{{ data.data_time }}</td>
+      <td>{{ data.error_code }}</td>
+      <td><a href="{{ data.url_name }}" target="_blank"><button type="button" class="btn btn-outline-success">Przejdź do strony</button></a></td>
     </tr>
   </tbody>
+      {% endfor %}
 </table>
 {% endblock %}
 
