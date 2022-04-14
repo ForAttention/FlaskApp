@@ -4,8 +4,7 @@ setup(
     name='FlasK',
     packages=['FlasK'],
     include_package_data=True,
-    install_requires=[
-        'flask',
+    install_requires=[ 's',
     ],
 )
 

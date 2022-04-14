@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}
+    ForAttention
+{% endblock %}
+
+{% block content %}
+<br>
+<h1>Lista ze stronami, które mają coś nie tak</h1>
+<br>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">URL NAME</th>
+      <th scope="col">STATUS CODE</th>
+      <th scope="col">DATA TIME</th>
+      <th scope="col">ERROR_CODE</th>
+      <th scope="col">LINK SITE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>ojooj</td>
+      <td><button type="button" class="btn btn-outline-danger">Przejdź do strony</button></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
+
+
+
+{% block contentt %}
+
+<br>
+<h1>Lista ze stronami, które są ok</h1>
+<br>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">URL NAME</th>
+      <th scope="col">STATUS CODE</th>
+      <th scope="col">DATA TIME</th>
+      <th scope="col">ERROR_CODE</th>
+        <th scope="col">LINK SITE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+        <td>ojooj</td>
+      <td><button type="button" class="btn btn-outline-success">Przejdź do strony</button></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
+
+
+
