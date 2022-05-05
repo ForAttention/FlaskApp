@@ -42,8 +42,7 @@ for url in list1:
                 # sprawdzam czy nie ma już wyciągniętego href'a w bazie i w liście 2
                 continue
             else:
-                # jeśli nie ma to dodajemy go do dwóch list
-                baza.append(absolute_link)
+                # jeśli nie ma to dodajemy go do listy
                 list2.append(absolute_link)
                 print("Dodane do listy " + absolute_link)
         else:
@@ -65,16 +64,18 @@ for url in list1:
         Tutaj wyjaśnię trochę
         mamy 3 listy, lista 1 / 2 i baza
         z głównej strony zbieramy do listy 1 i do bazy
-        potem z listy 1 zbieramy do bazy i listy 2 (sprawdzamy czy nie występuję takie same)
-        potem kasujemy zawartość listy 1
+        sprawdzamy wszystkie adresy jakie nam pobrał program z pierwszej strony (ze strony głównej)
+        potem kasujemy zawartość listy 1 i przenosimy zawartość listy 2 do listy pierwszej (przefiltrowana powtarzających się adresów)
         całą listę 2 przenosimy do listy 1 i czyścimy listę 2
+        ponownie pętla iterująca wszystkie elementy w liście 1 zaczyna swój nowy obieg z nowymi danymi
         W ten sposób w pętli jesteśmy w stanie wyciągnąć wszystkie hrefy należące do strony xyz.pl
         Ponieważ mamy if'a który sprawdza czy wartość listy 2 jest mniejsza niż jeden
+        co oznacza że nie znalazło już nowych adresów
         """
 
 ```
 
-Tak wygląda kod do wyciągania wszystkich podstron, później wszystkie sprawdzałem w takim sam sposób jak przykłądowy program, który napisałem do aplikacji.
+Tak wygląda kod do wyciągania wszystkich podstron, później wszystkie sprawdzałem w takim sam sposób jak przykładowy program, który napisałem do aplikacji.
 Tutaj zaprezentowałem tylko ułamek mojej pracy, w grę wchodziło również:
 * wyniki z testów zakupowych
 * wyniki z logowania / rejestracji
@@ -89,7 +90,7 @@ Aplikacja Webowa została napisana według sztuki dla większych projektów, ka�
 Aplikacja skupia się głównie w odbieraniu danych json wysyłanych po API, api w aplikacji napisałem sam.
 Folder FlasK posaida cały szkielet aplikacji, baza na git'cie jest pusta, możliwe jest tylko przesyłanie danych i ich przetrącanie z good_news do wrong_news.
 W folderze głównym repo znajduje się jeszcze jeden folder ,,LocalSpy" - tam jest przykładowy program do relacji po API z aplikacją.
-Aplikacja jest też cały czas na http://212.32.248.106/ LUB NA http://forattention.pl (jak na razie DNS jeszcze się nie przypisał, ale mam nadzieję że jednak ruszy).
+Aplikacja jest też cały czas na http://212.32.248.106/ LUB NA http://forattention.pl.
 Nagranie poniżej pokazuje jak wgrałem moją apliacjęn na serwer VPS, zależało mi na tym aby dało się wejść w nią bez żadnych przekierowań na porcie. Na filmmie pokazuje też, jak działa moja aplikacja.
 
 Kliknij kwadrat aby przejść do filmu (nagrałem w jakości FullHD żeby było widać terminal ;) ) 
